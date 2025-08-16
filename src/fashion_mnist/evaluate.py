@@ -5,7 +5,6 @@ import matplotlib.pyplot as plt
 from torch.utils.data import DataLoader
 from data_loader import load_data
 from model import FashionMNISTModel
-
 GREEN = '\033[32m'
 BOLD = '\033[1m'
 RESET = '\033[0m'
@@ -49,7 +48,6 @@ def evaluate_model(batch_size=64):
     acc = 100 * correct / total
     print(f"{BOLD}ACCURACY:{RESET} {BOLD_GREEN}{acc:.2f}%{RESET}")
 
-    #
     imgs, labels = next(iter(test_loader))
     outputs = model(imgs.to(device))
     _, pred = torch.max(outputs, 1)
