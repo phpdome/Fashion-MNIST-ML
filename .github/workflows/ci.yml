@@ -36,7 +36,7 @@ jobs:
       run: docker run --rm -e MODE=train -v ${{ github.workspace }}/src:/app/src fashion-mnist
 
     - name: Upload trained model
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: trained-model
         path: src/model.pth
