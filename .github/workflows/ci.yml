@@ -23,7 +23,6 @@ jobs:
 
       - name: Lint
         run: |
-          # mostra warning ma non fallisce su codici ignorati
           flake8 src || true
 
       - name: Test
