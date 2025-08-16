@@ -9,8 +9,8 @@ La repository contiene:
 ## Setup locale (opzionale)
 ```bash
 pip install -r requirements.txt
-python src/train.py
-python src/evaluate.py
+python3 src/train.py
+python3 src/evaluate.py
 ```
 
 ## Docker
@@ -33,3 +33,7 @@ Training + evaluation nello stesso container (consigliato):
 ```bash
 docker run --rm -e MODE=both fashion-mnist
 ```
+
+## CI (GitHub Actions)
+- Push su `main` → lint, test, build Docker, training nel container.
+- L’artifact `trained-model` contiene `model.pth`.
