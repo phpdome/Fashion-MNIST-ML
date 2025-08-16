@@ -1,4 +1,6 @@
 from setuptools import setup, find_packages
+from fashion_mnist.model import FashionMNISTModel
+from fashion_mnist.data_loader import load_data
 
 setup(
     name="fashion-mnist",
