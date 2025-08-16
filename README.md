@@ -6,7 +6,7 @@ La repository contiene :
 - Dockerfile con MODE=train|evaluate|both
 - CI GitHub Actions (lint, test, build, training + artifact)
 
-## Setup locale (opzionale)
+## Setup locale
 ```bash
 pip install -r requirements.txt
 python src/train.py
