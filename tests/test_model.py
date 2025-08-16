@@ -1,5 +1,5 @@
 import torch
-from src.model import FashionMNISTModel
+from src.fashion_mnist.model import FashionMNISTModel
 
 def test_forward_shape():
     model = FashionMNISTModel()
