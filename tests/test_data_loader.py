@@ -1,4 +1,4 @@
-from src.fashion_mnist.data_loader import load_data
+from fashion_mnist.data_loader import load_data
 
 def test_load_data_shapes():
     train, test = load_data()
