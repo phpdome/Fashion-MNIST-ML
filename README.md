@@ -1,2 +1,36 @@
-# Fashion-MNIST-ML
-Progetto per il corso "Sviluppo e ciclo vitale di software di intelligenza artificiale". Università degli studi di Verona A.A. 2024/25
+# Fashion-MNIST CNN — Docker + CI
+
+La repository contiene:
+- CNN semplice per Fashion-MNIST
+- Esecuzione CPU-only 
+- Dockerfile con MODE=train|evaluate|both
+- CI GitHub Actions (lint, test, build, training + artifact)
+
+- ## Setup locale (opzionale)
+```bash
+pip install -r requirements.txt
+python src/train.py
+python src/evaluate.py
+```
+
+
+## Docker
+Build:
+```bash
+docker build -t fashion-mnist .
+```
+
+Solo training:
+```bash
+docker run --rm -e MODE=train fashion-mnist
+```
+
+Solo evaluation (richiede `src/model.pth` creato da un training precedente nello stesso container):
+```bash
+docker run --rm -e MODE=evaluate fashion-mnist
+```
+
+Training + evaluation nello stesso container (consigliato):
+```bash
+docker run --rm -e MODE=both fashion-mnist
+```
