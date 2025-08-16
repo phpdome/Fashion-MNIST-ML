@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 from torch.utils.data import DataLoader
 from data_loader import load_data
 from model import FashionMNISTModel
+
 GREEN = '\033[32m'
 BOLD = '\033[1m'
 RESET = '\033[0m'

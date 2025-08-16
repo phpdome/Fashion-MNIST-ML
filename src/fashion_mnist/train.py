@@ -4,6 +4,7 @@ from torch import nn, optim
 from torch.utils.data import DataLoader
 from data_loader import load_data
 from model import FashionMNISTModel
+
 GREEN = '\033[32m'
 BOLD = '\033[1m'
 RESET = '\033[0m'
@@ -28,6 +29,7 @@ def train_model(epochs=3, batch_size=64, lr=1e-3):
             opt.step()
             running += loss.item()
         print(f"Epoch {epoch+1}/{epochs} - Loss: {running/len(train_loader):.4f}") 
+    
     model_path = os.path.join(os.path.dirname(__file__), "model.pth")
     torch.save(model.state_dict(), model_path)
     print(f"Modello salvato in {BOLD}{model_path}{RESET}")
