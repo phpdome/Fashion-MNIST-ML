@@ -3,7 +3,7 @@ from fashion_mnist.model import FashionMNISTModel
 from fashion_mnist.data_loader import load_data
 
 setup(
-    name="fashion-mnist",
+    name="Fashion-MNIST-ML",
     version="0.1.0",
     description="CNN per Fashion-MNIST con Docker e CI",
     author="Domenico Pullia",
