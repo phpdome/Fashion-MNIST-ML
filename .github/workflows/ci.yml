@@ -36,7 +36,7 @@ jobs:
         run: docker build -t fashion-mnist .
 
       - name: Train in Docker (CPU)
-        run: docker run --rm -e MODE=train fashion-mnist
+        run: docker run --rm -e MODE=both fashion-mnist
 
       - name: Upload trained model
         uses: actions/upload-artifact@v4
